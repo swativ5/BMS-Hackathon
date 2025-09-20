@@ -1,23 +1,23 @@
-# Wellness Assistant 🧘
+# Wellness Assistant
 
-A comprehensive wellness monitoring application that combines posture detection, eye tracking, and breathing/chanting guidance into a unified system.
+A comprehensive wellness monitoring application that brings together posture detection, eye tracking, and breathing or chanting guidance in one easy-to-use system.
 
 ## Features
 
-- **🎯 Posture Detection**: Real-time posture monitoring with auto-calibration
-- **👁️ Eye Tracking**: Open/closed eye detection using Eye Aspect Ratio (EAR)
-- **🫁 Breathing Guidance**: Guided inhale/exhale cycles with Om chanting
-- **🎤 Chant Recognition**: Advanced speech recognition for Om detection
-- **📊 Statistics Tracking**: Comprehensive session analytics
-- **🔧 Modular Design**: Easy to integrate and customize
+- Posture detection with real-time monitoring and auto-calibration
+- Eye tracking for open or closed eye detection using Eye Aspect Ratio (EAR)
+- Guided breathing cycles with Om chanting support
+- Speech recognition for Om chant detection
+- Session analytics and statistics tracking
+- Modular design for easy integration and customization
 
 ## Installation
 
 ### Requirements
-- Python 3.7+
+- Python 3.7 or higher
 - Camera (webcam)
 - Microphone
-- Audio output (speakers/headphones)
+- Audio output (speakers or headphones)
 
 ### Install Dependencies
 ```bash
@@ -25,12 +25,12 @@ pip install -r requirements.txt
 ```
 
 ### Dependencies Include:
-- `opencv-python` - Computer vision and camera handling
-- `mediapipe` - Pose and face landmark detection
-- `numpy` - Numerical computations
-- `speech-recognition` - Voice recognition
-- `pyttsx3` - Text-to-speech synthesis
-- `pyaudio` - Audio I/O
+- `opencv-python` for computer vision and camera handling
+- `mediapipe` for pose and face landmark detection
+- `numpy` for numerical computations
+- `speech-recognition` for voice recognition
+- `pyttsx3` for text-to-speech synthesis
+- `pyaudio` for audio input and output
 
 ## File Structure
 
@@ -40,7 +40,7 @@ wellness_assistant/
 ├── wellness_app.py          # Main application orchestrator
 ├── posture_detector.py      # Posture detection module
 ├── eye_detector.py          # Eye state detection module
-├── chant_detector.py        # Breathing & chant detection
+├── chant_detector.py        # Breathing and chant detection
 ├── breathing_thread.py      # Background breathing thread
 ├── speech_engine.py         # Text-to-speech engine
 ├── usage_examples.py        # Example implementations
@@ -49,59 +49,59 @@ wellness_assistant/
 
 ## Module Overview
 
-### 🏃 WellnessApp (`wellness_app.py`)
-Main application class that orchestrates all components:
+### WellnessApp (`wellness_app.py`)
+Main application class that manages all components:
 - Camera management
 - System calibration
 - Session control
 - Real-time display
 - Statistics tracking
 
-### 🎯 PostureDetector (`posture_detector.py`)
+### PostureDetector (`posture_detector.py`)
 Monitors user posture using MediaPipe pose detection:
 - Auto-calibration for neutral posture
 - Real-time posture evaluation
-- Distance warnings (too close/far)
+- Distance warnings for being too close or far
 - Posture statistics
 
-### 👁️ EyeDetector (`eye_detector.py`)
+### EyeDetector (`eye_detector.py`)
 Tracks eye state using facial landmarks:
 - Eye Aspect Ratio (EAR) calculation
-- Open/closed eye detection
+- Open or closed eye detection
 - Auto-threshold calibration
 - Blink detection
 
-### 🎤 ChantDetector (`chant_detector.py`)
+### ChantDetector (`chant_detector.py`)
 Handles breathing guidance and Om detection:
 - Guided breathing cycles
 - Speech recognition for Om
-- RMS-based silence detection
+- Silence detection based on RMS
 - Accurate duration measurement
 
-### 🫁 BreathingThread (`breathing_thread.py`)
+### BreathingThread (`breathing_thread.py`)
 Background thread for breathing sessions:
 - Non-blocking operation
 - Configurable intervals
-- Pause/resume functionality
+- Pause and resume functionality
 - Session callbacks
 
-### 🔊 SpeechEngine (`speech_engine.py`)
+### SpeechEngine (`speech_engine.py`)
 Thread-safe text-to-speech:
 - Queued speech processing
 - Voice customization
-- Non-blocking TTS
+- Non-blocking text-to-speech
 
 ## Controls During Session
 
-- **Q**: Quit session
-- **P**: Pause/resume breathing guidance
-- **F**: Force immediate breathing session
-- **R**: Reset statistics
+- Q: Quit session
+- P: Pause or resume breathing guidance
+- F: Start a breathing session immediately
+- R: Reset statistics
 
 ## Configuration Options
 
 ### Posture Detection
-- `AUTO_CALIBRATION_FRAMES`: Frames for auto-calibration (default: 75)
+- `AUTO_CALIBRATION_FRAMES`: Number of frames for auto-calibration (default: 75)
 - `SHOULDER_TILT_TOLERANCE`: Shoulder tilt tolerance (default: 1.5)
 - `HEAD_FORWARD_TOLERANCE`: Head forward tolerance (default: 1.5)
 - `SLOUCH_TOLERANCE`: Slouching tolerance (default: 0.8)
@@ -111,9 +111,9 @@ Thread-safe text-to-speech:
 - Supports manual threshold setting
 - Configurable landmark points
 
-### Breathing/Chanting
-- `interval`: Time between sessions (default: 20s)
-- `max_listen_time`: Max chant listening time (default: 15s)
+### Breathing and Chanting
+- `interval`: Time between sessions (default: 20 seconds)
+- `max_listen_time`: Maximum chant listening time (default: 15 seconds)
 - `silence_threshold`: RMS threshold for silence (default: 300)
 
 ## API Reference
@@ -146,8 +146,8 @@ Thread-safe text-to-speech:
 
 ### Camera Issues
 - Check camera permissions
-- Try different camera indices (0, 1, 2...)
-- Verify camera is not in use by other applications
+- Try different camera indices (0, 1, 2, etc.)
+- Make sure the camera is not in use by other applications
 
 ### Microphone Issues
 - Check microphone permissions
@@ -157,11 +157,11 @@ Thread-safe text-to-speech:
 ### Performance Issues
 - Lower camera resolution
 - Increase detection confidence thresholds
-- Close other applications using camera/microphone
+- Close other applications using the camera or microphone
 
 ### Speech Recognition Issues
-- Check internet connection (Google Speech API)
-- Speak clearly and close to microphone
+- Check internet connection (for Google Speech API)
+- Speak clearly and close to the microphone
 - Reduce background noise
 
 ## Contributing
@@ -178,3 +178,4 @@ For support and questions:
 - Create an issue on GitHub
 - Check the troubleshooting section
 - Review usage examples
+

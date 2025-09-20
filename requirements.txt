@@ -2,6 +2,6 @@ mediapipe
 opencv-python
 numpy
 beepy
-simpleaudio
+pygame
 audioread
 mutagen
